@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 extension Bundle{
     
     func decode<T: Codable>(_ file: String)-> T{
@@ -19,6 +19,9 @@ extension Bundle{
 
         }
         let decoder = JSONDecoder()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(formatter)
         guard let decodedData = try? decoder.decode(T.self, from: data) else{
             fatalError("Failed to decode the data.")
         }
@@ -27,4 +30,14 @@ extension Bundle{
     
    
     
+}
+
+extension ShapeStyle where Self == Color{
+    static var darkBackground: Color{
+        Color(red: 0.1, green: 0.1, blue: 0.2)
+    }
+    static var lightBackground: Color{
+        Color(red: 0.2, green: 0.2, blue: 0.3)
+    }
+
 }

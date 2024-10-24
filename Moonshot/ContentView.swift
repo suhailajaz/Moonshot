@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    let astronautData = Bundle.main.decode("astronauts.json")
+    let astronautData: [String:Astronaut] = Bundle.main.decode("astronauts.json")
+    let missionData: [Mission] = Bundle.main.decode("missions.json")
     var index = 1
     var body: some View {
-        
-       
-        Text(String(astronautData.count))
-       
+    
+        ScrollView{
+            ForEach(missionData){ item in
+                VStack(spacing: 30){
+                    Text("\(item.id)")
+                    Text(item.description)
+                }.padding(.horizontal,10)
+                
+            }
+        }
     }
 }
 

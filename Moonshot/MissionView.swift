@@ -27,61 +27,27 @@ struct MissionView: View {
                     }
                     .padding(.top)
                 
+                if let launchDate = mission.formattedLaunchDate(){
+                    Text("Launch Date: \(launchDate)")
+                        .font(.title2.smallCaps())
+                }
+                 
                 VStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius: 12)
-                        .frame(height: 1)
-                        .foregroundStyle(.white)
-                        .padding(.vertical)
+                 RectangularDivider()
                     
                     Text("Mission Highlights")
                         .font(.title.bold())
                         .padding(.bottom,5)
                     Text(mission.description)
                     
-                    RoundedRectangle(cornerRadius: 12)
-                        .frame(height: 1)
-                        .foregroundStyle(.white)
-                        .padding(.vertical)
+                   RectangularDivider()
                     
                     Text("Crew")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/.bold())
                         .padding(.bottom,5)
                 }
                 .padding(.horizontal)
-                
-                ScrollView(.horizontal,showsIndicators: false){
-                    HStack{
-                        ForEach(crew, id: \.role){ crewMember in
-                            NavigationLink{
-                                AstronautView(astronaut: crewMember.astronaut)
-                                
-                                
-                            }label:{
-                                HStack{
-                                    Image(crewMember.astronaut.id)
-                                        .resizable()
-                                        .frame(width: 104, height: 72)
-                                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                                        .overlay {
-                                            RoundedRectangle(cornerRadius: 20)
-                                                .stroke(.white, lineWidth: 1)
-                                        }
-                                    VStack(alignment: .leading){
-                                        Text(crewMember.astronaut.name)
-                                            .foregroundStyle(.white)
-                                        Text(crewMember.role)
-                                            .foregroundStyle(.white.opacity(0.5))
-                                    }
-                                }
-                                .padding(.horizontal)
-                            }
-                            
-                        }
-                    }
-                    
-                    
-    
-                }
+                MissionCrew(crew: self.crew)
             }
             .padding(.bottom)
         }

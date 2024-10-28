@@ -9,58 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
    
-    let astronautData: [String:Astronaut] = Bundle.main.decode("astronauts.json")
-    let missions: [Mission] = Bundle.main.decode("missions.json")
-    
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
+    @State private var isShowingGrid = false
     var body: some View {
+        
         NavigationStack{
-            ScrollView{
-                LazyVGrid(columns: columns){
-                    ForEach(missions){ mission in
-                        
-                        NavigationLink{
-                            MissionView(mission: mission,astronauts: astronautData)                        
-                        }label:{
-                            VStack{
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                VStack{
-                                    Text(mission.displayName)
-                                        .foregroundStyle(.white)
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundStyle(.gray)
-
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay(
-                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(.lightBackground)
-                            
-                            )
-                        }
-                        
-                    }
+            
+            Group{
+                if isShowingGrid{
+                    GridLayout()
+                }else{
+                    ListLayout()
+                    
                 }
-                .padding([.horizontal, .bottom])
-
             }
+            
+            
             .navigationTitle("Moonshot")
-            .background(.darkBackground)
             .preferredColorScheme(.dark)
-
+            .toolbar {
+                Button {
+                    self.isShowingGrid.toggle()
+                }label: {
+                    Image(systemName: "switch.2")
+                }
+            }
+            //.background(.darkBackground)
+            
+            
         }
-       
     }
 }
 

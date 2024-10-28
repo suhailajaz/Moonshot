@@ -15,6 +15,10 @@
 		1AE043A42CCA334200A373C2 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AE043A22CCA334200A373C2 /* missions.json */; };
 		1AE043A62CCA335200A373C2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE043A52CCA335200A373C2 /* Models.swift */; };
 		1AE043A82CCA33E100A373C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE043A72CCA33E100A373C2 /* Extensions.swift */; };
+		1AEE4CDD2CCFCE9300185289 /* MissionCrew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE4CDC2CCFCE9300185289 /* MissionCrew.swift */; };
+		1AEE4CDF2CCFCF9100185289 /* Rectangular Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE4CDE2CCFCF9100185289 /* Rectangular Divider.swift */; };
+		1AEE4CE12CCFD20500185289 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE4CE02CCFD20500185289 /* GridLayout.swift */; };
+		1AEE4CE32CCFD32200185289 /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE4CE22CCFD32200185289 /* ListLayout.swift */; };
 		1AF76A292CCE6AF600362C43 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76A282CCE6AF600362C43 /* MissionView.swift */; };
 		1AF76A2B2CCE86C000362C43 /* Astronauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76A2A2CCE86C000362C43 /* Astronauts.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +33,10 @@
 		1AE043A22CCA334200A373C2 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		1AE043A52CCA335200A373C2 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1AE043A72CCA33E100A373C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1AEE4CDC2CCFCE9300185289 /* MissionCrew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCrew.swift; sourceTree = "<group>"; };
+		1AEE4CDE2CCFCF9100185289 /* Rectangular Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rectangular Divider.swift"; sourceTree = "<group>"; };
+		1AEE4CE02CCFD20500185289 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		1AEE4CE22CCFD32200185289 /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 		1AF76A282CCE6AF600362C43 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		1AF76A2A2CCE86C000362C43 /* Astronauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronauts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +73,12 @@
 			children = (
 				1AD216C92CC9186000786136 /* MoonshotApp.swift */,
 				1AD216CB2CC9186000786136 /* ContentView.swift */,
+				1AEE4CE02CCFD20500185289 /* GridLayout.swift */,
+				1AEE4CE22CCFD32200185289 /* ListLayout.swift */,
 				1AF76A2A2CCE86C000362C43 /* Astronauts.swift */,
 				1AF76A282CCE6AF600362C43 /* MissionView.swift */,
+				1AEE4CDC2CCFCE9300185289 /* MissionCrew.swift */,
+				1AEE4CDE2CCFCF9100185289 /* Rectangular Divider.swift */,
 				1AD216CD2CC9186000786136 /* Assets.xcassets */,
 				1AE043A12CCA334200A373C2 /* astronauts.json */,
 				1AE043A22CCA334200A373C2 /* missions.json */,
@@ -160,7 +172,11 @@
 				1AD216CC2CC9186000786136 /* ContentView.swift in Sources */,
 				1AF76A2B2CCE86C000362C43 /* Astronauts.swift in Sources */,
 				1AE043A62CCA335200A373C2 /* Models.swift in Sources */,
+				1AEE4CE32CCFD32200185289 /* ListLayout.swift in Sources */,
+				1AEE4CDF2CCFCF9100185289 /* Rectangular Divider.swift in Sources */,
+				1AEE4CDD2CCFCE9300185289 /* MissionCrew.swift in Sources */,
 				1AD216CA2CC9186000786136 /* MoonshotApp.swift in Sources */,
+				1AEE4CE12CCFD20500185289 /* GridLayout.swift in Sources */,
 				1AE043A82CCA33E100A373C2 /* Extensions.swift in Sources */,
 				1AF76A292CCE6AF600362C43 /* MissionView.swift in Sources */,
 			);

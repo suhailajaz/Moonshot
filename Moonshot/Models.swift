@@ -27,8 +27,12 @@ struct Mission: Codable,Identifiable{
     var image: String{
         "apollo\(id)"
     }
-    var formattedLaunchDate: String{
-        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+//    var formattedLaunchDate: String?{
+//        launchDate?.formatted(date: .abbreviated, time: .omitted) 
+//    }
+    func formattedLaunchDate()-> String?{
+        launchDate?.formatted(date: .abbreviated, time: .omitted)
+
     }
 }
 
